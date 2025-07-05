@@ -206,14 +206,15 @@ section {
     font-size: 1em;
   }
 
-  /* Make story and call-to-action sections have less padding */
+  /* Make story, call-to-action, donation, and impact sections have less padding */
   .story,
   .call-to-action,
-  .donation-section {
+  .donation-section,
+  .impact-story {
     padding: 14px 8px;
   }
 
-  /* Make impact story image smaller and stack above the text */
+  /* Stack image and text vertically in the impact story on small screens */
   .impact-content {
     display: block; /* Stack items vertically */
     text-align: center;
@@ -242,3 +243,9 @@ section {
     width: 300px;
   }
 }
+
+/* 
+  Why use media queries?
+  Media queries let us change the layout and font sizes so the website is easy to read and looks good on both small screens (like phones) and large screens (like computers).
+  This helps everyone have a good experience, no matter what device they use!
+*/
