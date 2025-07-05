@@ -103,13 +103,55 @@ h2 {
   padding: 30px 20px;
 }
 
-/* Style the impact story image */
+/* Impact Story Section Styles */
+.impact-story {
+  background-color: #fff; /* White background for clarity */
+  color: #222;            /* Dark text for readability */
+  text-align: center;
+  padding: 30px 20px;
+  border-radius: 12px;
+  margin: 24px 10px;
+  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.07);
+}
+
+/* Layout for image and text in the impact story */
+.impact-content {
+  display: flex;
+  flex-direction: column; /* Stack on small screens */
+  align-items: center;
+  gap: 18px;
+  margin-top: 16px;
+}
+
+/* On larger screens, show image and text side by side */
+@media (min-width: 601px) {
+  .impact-content {
+    flex-direction: row; /* Side by side on desktop */
+    justify-content: center;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+/* Impact image style (already exists, but included for clarity) */
 .impact-image {
   width: 100%;
   max-width: 320px;
   border-radius: 10px;
   margin-bottom: 16px;
   box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
+}
+
+/* Donation Section Styles */
+.donation-section {
+  background-color: var(--primary-blue); /* Use primary blue for donation section */
+  color: #fff; /* White text for contrast */
+  text-align: center;
+  padding: 30px 20px;
+  border-radius: 12px;
+  margin: 24px 10px;
+  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.07);
 }
 
 /* Donate Button Styles */
