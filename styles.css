@@ -50,16 +50,17 @@ section {
 
 /* Hero Section Styles */
 .hero {
+  /* Full-width background image for attention */
   background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80');
-  background-size: cover;
-  background-position: center;
+  background-size: cover;         /* Make image cover the whole section */
+  background-position: center;    /* Center the image */
   background-repeat: no-repeat;
-  color: #fff;
-  text-align: center;
-  padding: 60px 20px;
-  border-radius: 0 0 16px 16px;
-  background-blend-mode: darken;
-  background-color: rgba(46, 157, 247, 0.45); /* Use primary blue as overlay */
+  color: #fff;                    /* White text for contrast */
+  text-align: center;             /* Center all text */
+  padding: 60px 20px;             /* Space above and below */
+  border-radius: 0 0 16px 16px;   /* Only round bottom corners */
+  background-blend-mode: darken;  /* Blend image with color for readability */
+  background-color: rgba(46, 157, 247, 0.45); /* Blue overlay */
 }
 
 /* Make the headline bold and modern */
@@ -68,7 +69,7 @@ section {
   font-weight: bold;
   letter-spacing: 1px;
   margin-bottom: 15px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  text-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Soft shadow for readability */
 }
 
 /* Style the subheadline */
