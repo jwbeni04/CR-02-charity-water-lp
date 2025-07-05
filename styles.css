@@ -27,11 +27,11 @@ Fonts:
 
 /* Set up the main font and background color for the whole page */
 body {
-  background-color: #f4f8fb; /* Soft light blue for a fresh look */
+  background-color: var(--primary-blue); /* Set background to primary blue */
   font-family: 'Avenir', Arial, sans-serif; /* Use Avenir for most text */
   margin: 0;
   padding: 0;
-  color: #222;
+  color: #fff; /* Set text color to white */
 }
 
 /* Headlines use Proxima Nova font for a calm, modern look */
@@ -82,7 +82,7 @@ section {
 /* Story Section Styles */
 .story {
   background-color: var(--secondary-light-blue); /* Secondary Light Blue */
-  color: #222;
+  color: #222; /* Keep text dark for contrast on light blue */
   text-align: center;
   padding: 30px 20px;
 }
@@ -96,8 +96,8 @@ h2 {
 
 /* Call-to-Action Section Styles */
 .call-to-action {
-  background-color: var(--primary-blue); /* Primary blue */
-  color: #fff;
+  background-color: #fff; /* White background for contrast */
+  color: var(--primary-blue); /* Blue text for call-to-action */
   text-align: center;
   padding: 30px 20px;
 }
