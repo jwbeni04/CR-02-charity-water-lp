@@ -1,3 +1,59 @@
+/*
+  Layout for the two main sections below the hero.
+  On large screens, they are side by side. On small screens, they stack.
+*/
+.main-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 0 10px 24px 10px;
+}
+
+@media (min-width: 800px) {
+  .main-sections {
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    gap: 32px;
+    margin: 0 24px 24px 24px;
+  }
+  .story-cta, .impact-story {
+    flex: 1 1 0;
+    max-width: 480px;
+    min-width: 280px;
+  }
+}
+
+/*
+  Story and Call-to-Action combined section style
+  This uses a border to make it stand out.
+*/
+.story-cta {
+  background: #fff;
+  border: 2px solid var(--primary-blue); /* Blue border */
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.07);
+  color: #222;
+  padding: 30px 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+/* Make the donate button stand out in the story-cta section */
+.story-cta .donate-button {
+  margin-top: 10px;
+}
+
+/* Remove duplicate border/shadow from impact-story when side by side */
+@media (min-width: 800px) {
+  .impact-story {
+    margin-bottom: 0;
+  }
+}
 /* charity: water Brand Colors & Fonts
 
 Primary Color:
