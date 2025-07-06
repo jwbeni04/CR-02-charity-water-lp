@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
-  margin: 0 10px 24px 10px;
+  margin: 0 24px 24px 24px; /* Match the header's left/right padding for alignment */
 }
 
 @media (min-width: 800px) {
@@ -15,9 +15,9 @@
     align-items: stretch;
     justify-content: stretch;
     gap: 32px;
-    margin: 0 0 24px 0;
+    margin: 0 0 24px 0; /* Remove side margins so sections stretch full width */
+    max-width: 100vw;    /* Stretch to full viewport width */
     width: 100vw;
-    max-width: 100vw;
     box-sizing: border-box;
   }
   .story-cta, .impact-story {
@@ -27,7 +27,10 @@
     width: 100%;
     margin-left: 0;
     margin-right: 0;
-    border-radius: 0;
+    border-radius: 0;      /* Remove rounded corners on large screens */
+    margin-bottom: 0;      /* Remove bottom margin so they line up */
+    padding-left: 40px;    /* Add more padding so content doesn't touch edge */
+    padding-right: 40px;
   }
 }
 
@@ -41,7 +44,7 @@
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(46, 157, 247, 0.07);
   color: #fff;
-  padding: 40px 24px;
+  padding: 20px 24px;
   margin-bottom: 20px;
   text-align: center;
   display: flex;
@@ -139,7 +142,7 @@ section {
   background-repeat: no-repeat;
   color: #fff;                    /* White text for contrast */
   text-align: center;             /* Center all text */
-  padding: 60px 20px;             /* Space above and below */
+  padding: 50px 20px;             /* Space above and below */
   border-radius: 16px 16px 16px 16px;   /* Only rounds all corners */
   background-blend-mode: darken;  /* Blend image with color for readability */
   background-color: rgba(46, 157, 247, 0.45); /* Blue overlay */
@@ -178,34 +181,10 @@ section {
 }
 
 
-
-/* Story Section Styles */
-.story {
-  background-color: var(--primary-blue); /* Secondary Light Blue */
-  color: #fff;
-  text-align: center;
-  padding: 30px 20px;
-}
-
-/* Add accent color to section headings */
-h2 {
-  color: #fff; /* Change headline color to white */
-  margin-top: 0;
-  font-weight: bold;
-}
-
-/* Call-to-Action Section Styles */
-.call-to-action {
-  background-color: var(--secondary-light-blue); /* Primary blue */
-  color: #fff;
-  text-align: center;
-  padding: 30px 20px;
-}
-
 /* Impact Story Section Styles */
 .impact-story {
   background-color: #8BD1CB; /* Light blue background for clarity */
-  color: #222;            /* Dark text for readability */
+  color: #fff;            /* Dark text for readability */
   text-align: center;
   padding: 40px 24px;
   border-radius: 12px;
@@ -214,7 +193,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 28px;
+  gap: 24px;
 }
 
 /* Make the main headline in impact-story bigger */
@@ -323,10 +302,7 @@ section {
   margin-bottom: 20px;
 }
 
-/* Remove old logo-container styles */
-.logo-container {
-  display: none;
-}
+
 
 /* 
   Media Queries for Responsive Design
@@ -388,7 +364,7 @@ section {
 
   .impact-image {
     /* Make the image wider to better fit the border */
-    width: 440px;
+    width: 320px;
     max-width: 98%;
   }
 }
