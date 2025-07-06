@@ -51,7 +51,7 @@ section {
 /* Hero Section Styles */
 .hero {
   /* Full-width background image for attention */
-  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80');
+  background-image: url('img/JS_20140422_7779-Edit.jpg');
   background-size: cover;         /* Make image cover the whole section */
   background-position: center;    /* Center the image */
   background-repeat: no-repeat;
