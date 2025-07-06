@@ -13,34 +13,59 @@
   .main-sections {
     flex-direction: row;
     align-items: stretch;
-    justify-content: center;
+    justify-content: stretch;
     gap: 32px;
-    margin: 0 24px 24px 24px;
+    margin: 0 0 24px 0;
+    width: 100vw;
+    max-width: 100vw;
+    box-sizing: border-box;
   }
   .story-cta, .impact-story {
     flex: 1 1 0;
-    max-width: 480px;
-    min-width: 280px;
+    max-width: none;
+    min-width: 0;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 0;
   }
 }
 
 /*
   Story and Call-to-Action combined section style
   This uses a border to make it stand out.
+  Headline and subheadline font sizes are increased to fill the border area.
 */
 .story-cta {
-  background: #fff;
-  border: 2px solid var(--primary-blue); /* Blue border */
+  background: var(--primary-blue);
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(46, 157, 247, 0.07);
-  color: #222;
-  padding: 30px 20px;
+  color: #fff;
+  padding: 40px 24px;
   margin-bottom: 20px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 18px;
+  gap: 28px;
+}
+
+/* Make the main headline in story-cta bigger */
+.story-cta h2:first-of-type {
+  font-size: 2.4em; /* Large headline */
+  margin-bottom: 10px;
+}
+
+/* Make the subheadline (Help Us Change More Lives) bigger */
+.story-cta h2:last-of-type {
+  font-size: 2em; /* Slightly smaller than main headline */
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.story-cta p {
+  font-size: 1.3em;
+  margin: 0 0 8px 0;
 }
 
 /* Make the donate button stand out in the story-cta section */
@@ -109,7 +134,8 @@ section {
   /* Full-width background image for attention */
   background-image: url('img/Madagascar_2019_CG-4509.jpg');
   background-size: cover;         /* Make image cover the whole section */
-  background-position: center; /* Move image 20px from the left, vertically centered */
+  background-position: center;
+   /* Move image 20px from the left, vertically centered */
   background-repeat: no-repeat;
   color: #fff;                    /* White text for contrast */
   text-align: center;             /* Center all text */
@@ -121,7 +147,7 @@ section {
 
 /* Make the headline bold and modern */
 .hero h1 {
-  font-size: 2.5em;
+  font-size: 3.5em;
   font-weight: bold;
   letter-spacing: 1px;
   margin-bottom: 15px;
@@ -130,7 +156,7 @@ section {
 
 /* Style the subheadline */
 .hero p {
-  font-size: 1.2em;
+  font-size: 1.5em;
   margin-top: 0;
   text-shadow: 0 1px 4px rgba(0,0,0,0.12);
   font-family: 'Avenir', Arial, sans-serif;
@@ -151,12 +177,6 @@ section {
   margin-right: 12px;         /* Space between logo and text */
 }
 
-.site-title {
-  font-family: 'Proxima Nova', Arial, sans-serif;
-  font-size: 1.6em;
-  font-weight: bold;
-  color: var(--primary-blue);
-}
 
 
 /* Story Section Styles */
@@ -176,7 +196,7 @@ h2 {
 
 /* Call-to-Action Section Styles */
 .call-to-action {
-  background-color: var(--primary-blue); /* Primary blue */
+  background-color: var(--secondary-light-blue); /* Primary blue */
   color: #fff;
   text-align: center;
   padding: 30px 20px;
@@ -184,13 +204,29 @@ h2 {
 
 /* Impact Story Section Styles */
 .impact-story {
-  background-color: #8BD1CB; /* White background for clarity */
+  background-color: #8BD1CB; /* Light blue background for clarity */
   color: #222;            /* Dark text for readability */
   text-align: center;
-  padding: 30px 20px;
+  padding: 40px 24px;
   border-radius: 12px;
   margin: 24px 10px;
   box-shadow: 0 2px 8px rgba(46, 157, 247, 0.07);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+/* Make the main headline in impact-story bigger */
+.impact-story h2 {
+  font-size: 2.4em; /* Large headline */
+  margin-bottom: 10px;
+}
+
+/* Make the impact story text bigger */
+.impact-story p {
+  font-size: 1.3em;
+  margin: 0 0 8px 0;
 }
 
 /* Layout for image and text in the impact story */
@@ -213,13 +249,21 @@ h2 {
   }
 }
 
-/* Impact image style (already exists, but included for clarity) */
+/* Impact image style (make the image larger and stand out more) */
 .impact-image {
   width: 100%;
-  max-width: 320px;
-  border-radius: 10px;
-  margin-bottom: 16px;
-  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
+  max-width: 480px; /* Increased max width for larger image */
+  border-radius: 16px; /* Slightly more rounded corners */
+  margin-bottom: 24px;
+  box-shadow: 0 4px 16px rgba(46, 157, 247, 0.18); /* Stronger shadow for emphasis */
+  transition: max-width 0.3s, box-shadow 0.3s;
+}
+
+@media (min-width: 601px) {
+  .impact-image {
+    width: 440px; /* Larger image on bigger screens */
+    max-width: 98%;
+  }
 }
 
 /* Donation Section Styles */
@@ -259,13 +303,13 @@ h2 {
 .donate-button:hover {
   background-color: #159A48; /* Slightly darker green for hover */
   transform: scale(1.06);    /* Slightly grow the button */
-  box-shadow: 0 0 24px 6px var(--primary-blue), 0 2px 8px rgba(79, 203, 83, 0.10); /* Blue glow like water splash */
+  box-shadow: 0 0 24px 6px var(--secondary-light-blue), 0 2px 8px rgba(79, 203, 83, 0.10); /* Blue glow like water splash */
 }
 
 /* Water splash effect on click (active) */
 .donate-button:active {
   transform: scale(0.97); /* Slightly shrink for a "splash down" effect */
-  box-shadow: 0 0 32px 12px var(--primary-blue), 0 2px 8px rgba(79, 203, 83, 0.10);
+  box-shadow: 0 0 32px 12px var(--secondary-light-blue), 0 2px 8px rgba(79, 203, 83, 0.10);
 }
 
 /* Change button color when hovered */
@@ -295,17 +339,17 @@ section {
   /* Make hero section padding smaller on small screens */
   .hero {
     padding: 32px 8px;
-    font-size: 1em;
+    font-size: 2em;
   }
 
   /* Make headline font size smaller so it fits on small screens */
   .hero h1 {
-    font-size: 1.4em;
+    font-size: 1.8em;
   }
 
   /* Make subheadline font size smaller */
   .hero p {
-    font-size: 1em;
+    font-size: 2em;
   }
 
   /* Make story, call-to-action, donation, and impact sections have less padding */
@@ -323,8 +367,9 @@ section {
   }
 
   .impact-image {
-    width: 90%;    /* Make image take up most of the width */
-    max-width: 220px;
+    /* Make image take up almost all the width inside its border */
+    width: 98%;    
+    max-width: 320px; /* Increased max width for larger image */
   }
 }
 
@@ -342,7 +387,9 @@ section {
   }
 
   .impact-image {
-    width: 300px;
+    /* Make the image wider to better fit the border */
+    width: 440px;
+    max-width: 98%;
   }
 }
 
