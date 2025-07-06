@@ -58,7 +58,7 @@ section {
   color: #fff;                    /* White text for contrast */
   text-align: center;             /* Center all text */
   padding: 60px 20px;             /* Space above and below */
-  border-radius: 0 0 16px 16px;   /* Only round bottom corners */
+  border-radius: 16px 16px 16px 16px;   /* Only rounds all corners */
   background-blend-mode: darken;  /* Blend image with color for readability */
   background-color: rgba(46, 157, 247, 0.45); /* Blue overlay */
 }
@@ -86,6 +86,7 @@ section {
   align-items: center;        /* Vertically center items */
   padding: 20px 24px 0 24px;  /* Space at the top and sides */
   background: none;           /* No background */
+  margin-bottom: 40px;        /* Increased space below header to prevent overlap */
 }
 
 .logo-img {
@@ -111,7 +112,7 @@ section {
 
 /* Add accent color to section headings */
 h2 {
-  color: var(--primary-blue); /* Primary blue */
+  color: #fff; /* Change headline color to white */
   margin-top: 0;
   font-weight: bold;
 }
@@ -126,7 +127,7 @@ h2 {
 
 /* Impact Story Section Styles */
 .impact-story {
-  background-color: #fff; /* White background for clarity */
+  background-color: #8BD1CB; /* White background for clarity */
   color: #222;            /* Dark text for readability */
   text-align: center;
   padding: 30px 20px;
@@ -187,9 +188,27 @@ h2 {
   font-size: 1.1em;
   margin-top: 18px;
   box-shadow: 0 2px 8px rgba(79, 203, 83, 0.10);
-  transition: background 0.3s, transform 0.2s;
+  transition: 
+    background 0.3s, 
+    transform 0.2s,
+    box-shadow 0.2s; /* Add transition for splash effect */
   border: none;
   cursor: pointer;
+  position: relative; /* Needed for splash effect */
+  overflow: hidden;   /* Hide splash outside button */
+}
+
+/* Water splash effect on hover */
+.donate-button:hover {
+  background-color: #159A48; /* Slightly darker green for hover */
+  transform: scale(1.06);    /* Slightly grow the button */
+  box-shadow: 0 0 24px 6px var(--primary-blue), 0 2px 8px rgba(79, 203, 83, 0.10); /* Blue glow like water splash */
+}
+
+/* Water splash effect on click (active) */
+.donate-button:active {
+  transform: scale(0.97); /* Slightly shrink for a "splash down" effect */
+  box-shadow: 0 0 32px 12px var(--primary-blue), 0 2px 8px rgba(79, 203, 83, 0.10);
 }
 
 /* Change button color when hovered */

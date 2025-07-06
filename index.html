@@ -11,7 +11,6 @@
     <header class="site-header">
         <!-- Logo image as part of the headline -->
         <img src="img/cw_logo-2.png" alt="charity: water logo" class="logo-img">
-        <span class="site-title">charity: water</span>
     </header>
 
     <!-- Hero Section: Main banner with background image -->
@@ -28,13 +27,6 @@
         <p>
             Charity: water is a nonprofit organization bringing clean and safe drinking water to people in developing countries. We believe everyone deserves access to clean water.
         </p>
-    </section>
-
-    <!-- Call-to-Action Section: Encourages visitors to take action -->
-    <section class="call-to-action">
-        <h2>Make a Difference</h2>
-        <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
-        <a href="#" class="donate-button">Donate Now</a>
     </section>
 
     <!-- Impact Story Section: Shows a real-world example with image and text -->
@@ -56,5 +48,37 @@
         <p>Your donation brings clean water to more families. Every dollar counts!</p>
         <a href="#" class="donate-button">Donate Now</a>
     </section>
+    <!-- Confetti effect will be added by JavaScript -->
+    <script>
+    // Simple confetti effect for beginners
+    document.querySelectorAll('.donate-button').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        // Create a confetti container
+        const confetti = document.createElement('div');
+        confetti.className = 'confetti';
+        btn.appendChild(confetti);
+
+        // Create 12 confetti pieces with random colors and directions
+        const colors = ['#2E9DF7', '#FFC907', '#8BD1CB', '#4FCB53', '#FF902A', '#F5402C', '#F16061'];
+        for (let i = 0; i < 12; i++) {
+          const piece = document.createElement('div');
+          piece.className = 'confetti-piece';
+          piece.style.background = colors[Math.floor(Math.random() * colors.length)];
+          // Random direction for each piece
+          const angle = Math.random() * 2 * Math.PI;
+          const distance = 60 + Math.random() * 40;
+          piece.style.setProperty('--x', `${Math.cos(angle) * distance}px`);
+          piece.style.setProperty('--y', `${Math.sin(angle) * distance}px`);
+          confetti.appendChild(piece);
+        }
+
+        // Remove confetti after animation
+        setTimeout(() => {
+          confetti.remove();
+        }, 900);
+      });
+    });
+    </script>
 </body>
 </html>
