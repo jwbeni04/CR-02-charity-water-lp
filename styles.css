@@ -53,7 +53,7 @@ section {
   /* Full-width background image for attention */
   background-image: url('img/Madagascar_2019_CG-4509.jpg');
   background-size: cover;         /* Make image cover the whole section */
-  background-position: 20px center; /* Move image 20px from the left, vertically centered */
+  background-position: center; /* Move image 20px from the left, vertically centered */
   background-repeat: no-repeat;
   color: #fff;                    /* White text for contrast */
   text-align: center;             /* Center all text */
