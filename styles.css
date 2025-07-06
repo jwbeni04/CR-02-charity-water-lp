@@ -80,6 +80,27 @@ section {
   font-family: 'Avenir', Arial, sans-serif;
 }
 
+/* Site header with logo and company name */
+.site-header {
+  display: flex;              /* Place logo and text side by side */
+  align-items: center;        /* Vertically center items */
+  padding: 20px 24px 0 24px;  /* Space at the top and sides */
+  background: none;           /* No background */
+}
+
+.logo-img {
+  height: 40px;               /* Logo height */
+  width: auto;                /* Keep aspect ratio */
+  margin-right: 12px;         /* Space between logo and text */
+}
+
+.site-title {
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-size: 1.6em;
+  font-weight: bold;
+  color: var(--primary-blue);
+}
+
 /* Story Section Styles */
 .story {
   background-color: var(--secondary-light-blue); /* Secondary Light Blue */
@@ -182,30 +203,9 @@ section {
   margin-bottom: 20px;
 }
 
-/* Logo styles */
+/* Remove old logo-container styles */
 .logo-container {
-  position: absolute;      /* Place logo over the page */
-  top: 20px;               /* Space from the top */
-  right: 24px;             /* Space from the right */
-  z-index: 10;             /* Make sure it stays on top */
-}
-
-.logo-img {
-  height: 40px;            /* Set logo height */
-  width: auto;             /* Keep aspect ratio */
-  display: block;
-}
-
-/* On small screens, center the logo at the top */
-@media (max-width: 600px) {
-  .logo-container {
-    position: static;      /* Remove absolute positioning */
-    text-align: center;    /* Center the logo */
-    margin: 16px 0 0 0;    /* Add space above */
-  }
-  .logo-img {
-    height: 32px;          /* Make logo a bit smaller on mobile */
-  }
+  display: none;
 }
 
 /* 
