@@ -104,8 +104,8 @@ section {
 
 /* Story Section Styles */
 .story {
-  background-color: var(--secondary-light-blue); /* Secondary Light Blue */
-  color: #222;
+  background-color: var(--primary-blue); /* Secondary Light Blue */
+  color: #fff;
   text-align: center;
   padding: 30px 20px;
 }
