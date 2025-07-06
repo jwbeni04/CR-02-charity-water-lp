@@ -34,7 +34,7 @@
         <h2>Real Impact: Meet Amina</h2>
         <div class="impact-content">
             <!-- Impact image -->
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina smiling with clean water" class="impact-image">
+            <img src="img/Malawi_2023_CG-7549.jpg" alt="Amina smiling with clean water" class="impact-image">
             <!-- Impact story text -->
             <p>
                 Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
@@ -47,38 +47,5 @@
         <h2>Help Us Change More Lives</h2>
         <p>Your donation brings clean water to more families. Every dollar counts!</p>
         <a href="#" class="donate-button">Donate Now</a>
-    </section>
-    <!-- Confetti effect will be added by JavaScript -->
-    <script>
-    // Simple confetti effect for beginners
-    document.querySelectorAll('.donate-button').forEach(function(btn) {
-      btn.addEventListener('click', function(e) {
-        e.preventDefault();
-        // Create a confetti container
-        const confetti = document.createElement('div');
-        confetti.className = 'confetti';
-        btn.appendChild(confetti);
-
-        // Create 12 confetti pieces with random colors and directions
-        const colors = ['#2E9DF7', '#FFC907', '#8BD1CB', '#4FCB53', '#FF902A', '#F5402C', '#F16061'];
-        for (let i = 0; i < 12; i++) {
-          const piece = document.createElement('div');
-          piece.className = 'confetti-piece';
-          piece.style.background = colors[Math.floor(Math.random() * colors.length)];
-          // Random direction for each piece
-          const angle = Math.random() * 2 * Math.PI;
-          const distance = 60 + Math.random() * 40;
-          piece.style.setProperty('--x', `${Math.cos(angle) * distance}px`);
-          piece.style.setProperty('--y', `${Math.sin(angle) * distance}px`);
-          confetti.appendChild(piece);
-        }
-
-        // Remove confetti after animation
-        setTimeout(() => {
-          confetti.remove();
-        }, 900);
-      });
-    });
-    </script>
 </body>
 </html>
