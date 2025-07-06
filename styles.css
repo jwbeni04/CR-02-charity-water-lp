@@ -182,6 +182,32 @@ section {
   margin-bottom: 20px;
 }
 
+/* Logo styles */
+.logo-container {
+  position: absolute;      /* Place logo over the page */
+  top: 20px;               /* Space from the top */
+  right: 24px;             /* Space from the right */
+  z-index: 10;             /* Make sure it stays on top */
+}
+
+.logo-img {
+  height: 40px;            /* Set logo height */
+  width: auto;             /* Keep aspect ratio */
+  display: block;
+}
+
+/* On small screens, center the logo at the top */
+@media (max-width: 600px) {
+  .logo-container {
+    position: static;      /* Remove absolute positioning */
+    text-align: center;    /* Center the logo */
+    margin: 16px 0 0 0;    /* Add space above */
+  }
+  .logo-img {
+    height: 32px;          /* Make logo a bit smaller on mobile */
+  }
+}
+
 /* 
   Media Queries for Responsive Design
   Media queries help make your website look good on different screen sizes,
