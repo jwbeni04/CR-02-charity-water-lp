@@ -103,68 +103,27 @@ section {
 }
 
 
-/* Combined Info Sidebar Styles (for Story and Call-to-Action) */
-.info-sidebar {
-  background-color: #fff; /* White background for sidebar */
-  border: 2px solid var(--primary-blue); /* Blue border */
-  border-radius: 12px;
-  color: #222;
-  padding: 24px 16px;
-  margin: 24px 10px;
-  margin-right: 0;
-  margin-left: 0;
-  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.07);
-  max-width: 320px;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
+/* Story Section Styles */
+.story {
+  background-color: var(--primary-blue); /* Secondary Light Blue */
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
 }
 
-.info-sidebar h2 {
-  color: var(--primary-blue); /* Blue headline */
+/* Add accent color to section headings */
+h2 {
+  color: #fff; /* Change headline color to white */
   margin-top: 0;
   font-weight: bold;
-  font-size: 1.3em;
 }
 
-.info-sidebar .cta {
-  background-color: var(--primary-blue);
+/* Call-to-Action Section Styles */
+.call-to-action {
+  background-color: var(--primary-blue); /* Primary blue */
   color: #fff;
-  border-radius: 8px;
-  padding: 16px 12px;
-  margin-top: 10px;
   text-align: center;
-  font-weight: bold;
-}
-
-/* Layout for hero and sidebar on larger screens */
-.main-flex {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
-
-@media (min-width: 900px) {
-  .main-flex {
-    flex-direction: row;
-    align-items: stretch;
-    gap: 24px;
-    justify-content: center;
-  }
-  .info-sidebar {
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 24px;
-    max-width: 320px;
-    min-width: 220px;
-    flex-shrink: 0;
-    align-self: flex-start;
-  }
-  .hero {
-    flex: 1;
-    min-width: 0;
-  }
+  padding: 30px 20px;
 }
 
 /* Impact Story Section Styles */
